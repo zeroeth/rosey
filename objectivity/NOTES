@@ -1,0 +1,11 @@
+ObjectiveC and NextStep libraries under linux.
+
+
+Clang
+-----
+
+install clang, gnustep, and gobjc (or libobjc)
+
+current compile:
+
+clang `gnustep-config --objc-flags` main.m `gnustep-config --base-libs` -I/usr/lib/gcc/x86_64-linux-gnu/4.7/include -L/usr/lib/gcc/x86_64-linux-gnu/4.7/
