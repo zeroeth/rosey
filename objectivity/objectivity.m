@@ -1,33 +1,67 @@
 // pure objective c version, and then gnustep version
 #include <Foundation/Foundation.h>
 
-@interface Player : NSObject{
-    int health;
-    //char *name;
+@interface Player : NSObject {
+  NSString *name;
 }
 
+@property (retain) NSString *name;
+
+- (id) initWithName: (NSString *)inName;
 @end
 
 
 @implementation Player
+@synthesize name;
 
-@end
 
+- (id) initWithName: (NSString *)inName {
 
-@interface GameState {
-    // array of players
+  return self;
 }
 @end
 
+
+
+@interface GameState : NSObject {
+  NSArray *players;
+}
+
+@property (retain) NSArray *players;
+@end
+
+
+@implementation GameState
+@synthesize players;
+@end
+
+
+
+@interface PlayerReport : NSObject {
+}
+
++ (void) about: (GameState *)level;
+@end
+
+
+@implementation PlayerReport
+
++ (void) about: (GameState *)level {
+  NSLog (@"Players");
+}
+@end
+
+
+
 int main( int argc, const char *argv[] )
 {
-  // create Game object
-  Player *player1 = [[Player alloc] init];
+  GameState *level = [[GameState alloc] init];
 
-  // create/add Players to Game
+  Player *player1 = [[Player alloc] initWithName: @"zeroeth"];
+  Player *player2 = [[Player alloc] initWithName: @"takeshi"];
+  Player *player3 = [[Player alloc] initWithName: @"haiiro" ];
 
-  // reporter prints player info
+  [PlayerReport about:level];
 
-  NSLog (@"Game Started\n");
   return 0;
 }
