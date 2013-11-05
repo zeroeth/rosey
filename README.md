@@ -4,4 +4,10 @@ rosey
 Madness in many languages. Playing around with linux dev using node/c#/objectivec/etc.
 
 
-* Monolithic: Compiled with Mono 2.3.2 using `msc monolithic.cs`
+goals
+-----
+
+* explore the differences in including multiple files, and basic OO.
+* explore the subtle build processes of each language, ie make, ant, clang.
+
+
