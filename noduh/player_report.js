@@ -1,8 +1,8 @@
 var PlayerReport = function() {}
 
 PlayerReport.about = function (gameState) {
-  console.log("Players"   );
-  console.log("----------");
+  console.log(gameState.players.length + " Players");
+  console.log("---------");
 
   gameState.players.forEach (function (player) {
     console.log(player.name);
