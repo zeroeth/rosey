@@ -1,15 +1,18 @@
-using System;
-
-public class PlayerReport
+namespace Monolithic
 {
-  public static void about (GameState level)
-  {
-    Console.WriteLine (level.players.Count+" Players:");
-    Console.WriteLine ("----------");
+  using System;
 
-    foreach (Player player in level.players)
+  public class PlayerReport
+  {
+    public static void about (GameState level)
     {
-      Console.WriteLine (player.Name);
+      Console.WriteLine (level.players.Count+" Players:");
+      Console.WriteLine ("----------");
+
+      foreach (Player player in level.players)
+      {
+        Console.WriteLine (player.Name);
+      }
     }
   }
 }

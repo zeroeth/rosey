@@ -1,13 +1,16 @@
-public class Monolithic
+namespace Monolithic
 {
-  static public void Main ()
+  public class App
   {
-    GameState level1 = new GameState ();
+    static public void Main ()
+    {
+      GameState level1 = new GameState ();
 
-    level1.AddPlayer (new Player ("zeroeth"));
-    level1.AddPlayer (new Player ("haiiro" ));
-    level1.AddPlayer (new Player ("takeshi"));
+      level1.AddPlayer (new Player ("zeroeth"));
+      level1.AddPlayer (new Player ("haiiro" ));
+      level1.AddPlayer (new Player ("takeshi"));
 
-    PlayerReport.about (level1);
+      PlayerReport.about (level1);
+    }
   }
 }

@@ -1,10 +1,13 @@
-public class Player
+namespace Monolithic
 {
-  public string Name { get; set; }
-
-  public Player (string name)
+  public class Player
   {
-    Name = name;
+    public string Name { get; set; }
+
+    public Player (string name)
+    {
+      Name = name;
+    }
   }
 }
 
