@@ -7,7 +7,7 @@ Madness in many languages. Playing around with linux dev using node/c#/objective
 goals
 -----
 
-* explore the differences in including multiple files, and basic OO.
+* explore the differences in including multiple files, and basic OO with dynamic object creation and output formatting.
 * explore the subtle build processes of each language, ie make, ant, clang.
-
+* try and organize folder structures
 
