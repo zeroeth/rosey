@@ -11,7 +11,7 @@ var App = function () {
     var level = new GameState ();
 
     level.addPlayer (new Player ("zeroeth"));
-    level.addPlayer (new Player ("haiiro"));
+    level.addPlayer (new Player ("haiiro" ));
     level.addPlayer (new Player ("takeshi"));
 
     PlayerReport.about (level);
