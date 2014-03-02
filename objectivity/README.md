@@ -6,9 +6,9 @@ Clang
 
 install clang, gnustep, and gobjc (or libobjc)
 
-current compile:
+current compile (clang or gcc)
 
-clang|gcc `gnustep-config --objc-flags` *.m `gnustep-config --base-libs` -I/usr/lib/gcc/x86_64-linux-gnu/4.7/include -L/usr/lib/gcc/x86_64-linux-gnu/4.7/
+    {compiler} `gnustep-config --objc-flags` *.m `gnustep-config --base-libs` -I/usr/lib/gcc/x86_64-linux-gnu/4.7/include -L/usr/lib/gcc/x86_64-linux-gnu/4.7/
 
 gnustep-config output for reference:
 
