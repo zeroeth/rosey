@@ -1,3 +1,9 @@
+#ifndef CEE_PLAYER_H_H
+#define CEE_PLAYER_H_H
+
+#include <stdlib.h>
+
+
 /* Player */
 
 typedef struct Player
@@ -7,10 +13,8 @@ typedef struct Player
 } Player;
 
 
-Player *new_player(char *name)
-{
-	Player *player = malloc(sizeof(Player));
-	player->name = name;
-	return player;
-}
+/* Prototypes */
 
+Player *new_player (char *);
+
+#endif

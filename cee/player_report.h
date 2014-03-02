@@ -1,10 +1,10 @@
-/* Player Report */
+#ifndef GRANDFATHER_H
+#define GRANDFATHER_H
 
-void player_report(GameState *game_state)
-{
-	for(int i = 0; i < game_state->player_position; i++)
-	{
-		printf("Player: %s\n", game_state->players[i]->name);
-	}
-}
+#include <stdio.h>
+#include "game_state.h"
+
+void player_report (GameState *);
+
+#endif
 

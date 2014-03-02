@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "player.h"
 #include "game_state.h"
 #include "player_report.h"
