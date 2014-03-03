@@ -27,10 +27,10 @@ Player::Player(std::string in_name):
 
 std::string Player::get_name()
 {
-	return name;
+	return this->name;
 }
 
-//typedef vector<Player *> PlayerList;
+typedef std::vector<Player *> PlayerList;
 
 int main()
 {
@@ -39,16 +39,20 @@ int main()
 	Player *player3 = new Player ("haiiro" );
 	Player *player4 = new Player ("takeshi");
 
-	std::vector<Player*> *players = new std::vector<Player*>;
+
+	PlayerList *players = new PlayerList;
 
 	players->push_back(player1);
 	players->push_back(player2);
 	players->push_back(player3);
 	players->push_back(player4);
 
-	for (std::vector<Player*>::iterator iterator = players->begin(); iterator != players->end(); iterator++)
+
+	PlayerList::iterator player_iterator;
+
+	for (player_iterator = players->begin();  player_iterator != players->end();  player_iterator++)
 	{
-		std::cout << (*iterator)->get_name() << std::endl;
+		std::cout << (*player_iterator)->get_name() << std::endl;
 	}
 
 	return 0;
