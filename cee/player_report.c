@@ -11,4 +11,3 @@ void player_report(GameState *game_state)
 		printf("Player: %s\n", game_state->players[i]->name);
 	}
 }
-
