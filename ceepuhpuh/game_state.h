@@ -7,6 +7,8 @@
 
 typedef std::vector<Player *> PlayerList;
 
+/* TODO try single file class with methods embedded */
+
 class GameState {
 
 public:
