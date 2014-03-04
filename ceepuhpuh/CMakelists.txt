@@ -1,0 +1,4 @@
+cmake_minimum_required (VERSION 2.6)
+project (CEEPUHPUH)
+
+add_executable(ceepuhpuh ceepuhpuh.cpp player.cpp game_state.cpp player_report.cpp)
