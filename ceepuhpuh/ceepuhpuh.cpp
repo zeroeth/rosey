@@ -1,59 +1,17 @@
-#include <iostream>
-#include <string>
-#include <vector>
-
-
-class Player {
-
-public:
-
-	/* Variables */
-	std::string name;
-
-	/* Constructor */
-	Player (std::string);
-
-	/* Methods */
-	std::string get_name();
-};
-
-
-/* Player Methods */
-
-Player::Player(std::string in_name):
-	name (in_name)
-{
-}
-
-std::string Player::get_name()
-{
-	return this->name;
-}
-
-typedef std::vector<Player *> PlayerList;
+#include "player.h"
+#include "game_state.h"
+#include "player_report.h"
 
 int main()
 {
-	Player *player1 = new Player ("zeroeth");
-	Player *player2 = new Player ("mizu"   );
-	Player *player3 = new Player ("haiiro" );
-	Player *player4 = new Player ("takeshi");
+	GameState *level = new GameState;
 
+	level->add_player (new Player ("zeroeth"));
+	level->add_player (new Player ("mizu"   ));
+	level->add_player (new Player ("takeshi"));
+	level->add_player (new Player ("haiiro" ));
 
-	PlayerList *players = new PlayerList;
-
-	players->push_back(player1);
-	players->push_back(player2);
-	players->push_back(player3);
-	players->push_back(player4);
-
-
-	PlayerList::iterator player_iterator;
-
-	for (player_iterator = players->begin();  player_iterator != players->end();  player_iterator++)
-	{
-		std::cout << (*player_iterator)->get_name() << std::endl;
-	}
+	PlayerReport::about (level);
 
 	return 0;
 }
