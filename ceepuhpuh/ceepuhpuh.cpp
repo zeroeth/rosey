@@ -13,5 +13,7 @@ int main()
 
 	PlayerReport::about (level);
 
+	/* TODO cleanup */
+
 	return 0;
 }
